@@ -1,13 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[26]:
-
-
-get_ipython().system('pip install selenium')
-get_ipython().system('pip install telepot')
-
-
 # In[27]:
 
 
@@ -31,7 +24,7 @@ dados_login.columns = ['dados']
 
 
 options = webdriver.ChromeOptions()
-# options.add_argument('--headless')
+options.add_argument('--headless')
 # options.add_experimental_option("prefs", {"profile.default_content_setting_values.cookies": })
 driver = webdriver.Chrome(options=options)
 driver.get("https://sig.cefetmg.br/sigaa/verTelaLogin.do")
